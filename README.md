@@ -4,7 +4,7 @@
 ## Project Summary
 This project utilizes historical sales data from 2010 to 2018 to develop a ridge regression model for predicting Jeep Wrangler's monthly sales. The model incorporates economic and search-related indicators such as the unemployment rate, Wrangler-related Google search queries, and Consumer Price Index (CPI) indices.
 
-By implementing ridge regression, we introduce regularization to prevent overfitting and enhance the model’s generalizability. After tuning the regularization parameter (lambda, \( \lambda \)), the optimized model is used to predict future Wrangler sales based on new feature values.
+By implementing ridge regression, we introduce regularization to prevent overfitting and enhance the model’s generalizability. After tuning the regularization parameter lambda, the optimized model is used to predict future Wrangler sales based on new feature values.
 
 ## Why This Project is Important
 Accurate sales prediction is crucial for automobile manufacturers and dealers to make data-driven decisions regarding production, marketing, and resource allocation. Jeep can leverage this model to:
@@ -33,7 +33,7 @@ To build the model, relevant features are selected based on their relationship w
 
 
 ### 4. Ridge Regression and Hyperparameter Tuning
-Ridge regression is used instead of ordinary least squares regression to mitigate overfitting by adding a penalty term controlled by the regularization parameter \( \lambda \). The model is trained for multiple \( \lambda \) values to find the optimal one that minimizes RMSE. Ridge Regression is a type of linear regression that includes a regularization term to prevent overfitting. It modifies the ordinary least squares (OLS) regression by adding a penalty term to the loss function that shrinks the regression coefficients. This penalty is controlled by a hyperparameter, lambda (λ).
+Ridge regression is used instead of ordinary least squares regression to mitigate overfitting by adding a penalty term controlled by the regularization parameter lambda. The model is trained for multiple \( \lambda \) values to find the optimal one that minimizes RMSE. Ridge Regression is a type of linear regression that includes a regularization term to prevent overfitting. It modifies the ordinary least squares (OLS) regression by adding a penalty term to the loss function that shrinks the regression coefficients. This penalty is controlled by a hyperparameter, lambda (λ).
 
 There are other types of machine learning methods and data analysis methdods that also might have been suited for this task. 
 If interpretability is important → Ridge Regression or Lasso (understandable coefficients).
@@ -46,10 +46,10 @@ If we have very large data → Neural Networks or Gradient Boosting.
 To visualize the impact of different \( \lambda \) values, RMSE is plotted against \( \lambda \).
 
 
-The best \( \lambda \) value is found to be **390**, which minimizes RMSE.
+The best lambda value is found to be **390**, which minimizes RMSE.
 
 ### 6. Final Model Training and Prediction
-After selecting the optimal \( \lambda \), the final Ridge regression model is trained and used to predict Jeep Wrangler’s 2018 sales.
+After selecting the optimal lambda, the final Ridge regression model is trained and used to predict Jeep Wrangler’s 2018 sales.
 
 
 The model predicts **16,993 sales** for the Wrangler in 2018.
