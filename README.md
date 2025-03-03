@@ -31,22 +31,6 @@ To build the model, relevant features are selected based on their relationship w
 - **Wrangler Queries:** Google search queries related to Jeep Wrangler, indicating consumer interest.
 - **CPI Energy & CPI All:** Measures inflation trends in general and energy-specific markets.
 
-```
-
-### 3. Data Splitting
-The data is split into training (2010-2017) and test sets (2018) to evaluate model performance.
-
-```python
-# Split data into training (2010-2017) and test (2018) sets
-train_data = data[data['Year'] < 2018]
-test_data = data[data['Year'] == 2018]
-
-X_train = train_data[['Year', 'Unemployment.Rate', 'Wrangler.Queries', 'CPI.Energy', 'CPI.All']]
-y_train = train_data['Wrangler.Sales']
-
-X_test = test_data[['Year', 'Unemployment.Rate', 'Wrangler.Queries', 'CPI.Energy', 'CPI.All']]
-y_test = test_data['Wrangler.Sales']
-```
 
 ### 4. Ridge Regression and Hyperparameter Tuning
 Ridge regression is used instead of ordinary least squares regression to mitigate overfitting by adding a penalty term controlled by the regularization parameter \( \lambda \). The model is trained for multiple \( \lambda \) values to find the optimal one that minimizes RMSE. Ridge Regression is a type of linear regression that includes a regularization term to prevent overfitting. It modifies the ordinary least squares (OLS) regression by adding a penalty term to the loss function that shrinks the regression coefficients. This penalty is controlled by a hyperparameter, lambda (λ).
